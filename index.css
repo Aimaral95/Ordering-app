@@ -1,3 +1,45 @@
 body {
-    margin: 0;
-} 
+  margin: 0;
+  font-family: "Smythe", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+/* HEADER */
+header {
+  width: 600px;
+  position: relative;
+  background-image: url("./images/restaurant.jpg");
+  background-size: cover;
+  background-position: center right;
+  color: #ffffff;
+  font-weight: 400;
+  padding: 46px 40px 90px;
+}
+
+/* darken left side a bit so text pops */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.hero-text {
+  position: relative; /* sit above the gradient overlay */
+}
+
+
+header h1 {
+  margin-bottom: 6px;
+  font-size: 39px; 
+}
+
+header h2 {
+  margin: 0;
+  font-size: 22px;
+}
