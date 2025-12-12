@@ -14,7 +14,7 @@ header {
   background-position: center right;
   color: #ffffff;
   font-weight: 400;
-  padding: 46px 40px 90px;
+  padding: 10px 8px 30px 46px;
 }
 
 /* darken left side a bit so text pops */
@@ -35,7 +35,7 @@ header::before {
 
 
 header h1 {
-  margin-bottom: 6px;
+  margin-bottom: 2px;
   font-size: 39px; 
 }
 
