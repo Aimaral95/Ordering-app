@@ -1,13 +1,9 @@
-body {
-  margin: 0;
-  font-family: "Smythe", sans-serif;
-  display: flex;
-  justify-content: center;
+html, body {
+    margin: 0;
+    font-family: "Smythe", sans-serif;
 }
 
-/* HEADER */
 header {
-  width: 600px;
   position: relative;
   background-image: url("./images/restaurant.jpg");
   background-size: cover;
@@ -33,13 +29,37 @@ header::before {
   position: relative; /* sit above the gradient overlay */
 }
 
-
 header h1 {
   margin-bottom: 2px;
   font-size: 39px; 
 }
 
 header h2 {
-  margin: 0;
+  margin:0;
   font-size: 22px;
+}
+
+.controls-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.menu-item{
+  display: flex;
+  align-items: center;flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 0;
+  border-bottom: 1px solid #dedede;
+}
+
+.emoji{
+  font-size: 46px;
+}
+
+.add-btn{
+  display: flex;
+  align-items: end;
+  gap: 12px;           
 }
