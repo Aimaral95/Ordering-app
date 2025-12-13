@@ -22,4 +22,5 @@ npm install
 npm start
 ```
 Developer
+
 Aimaral Khaumyetbyek – Front-end development & UI implementation
