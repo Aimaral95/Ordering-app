@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant ordering app</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,21 +14,74 @@
   </head>
 
   <body>
-
-   <header>
-    <div class="hero-text">
+    <header>
+      <div class="hero-text">
         <h1>Jimmy's Diner</h1>
         <h2>The best burgers and pizzas in town.</h2>
-    </div>
-   </header>
+      </div>
+    </header>
 
-   <main>
-    <section id="menu">
-      <!-- renderMenuItems() -->
-    </section>
-   </main>
+    <main>
+      <section id="menu" class="container"></section>
+
+      <section id="order" class="container hidden">
+        <h3 class="centered-text">Your order</h3>
+
+        <ul class="order-items" id="order-items"></ul>
+
+        <hr class="order-line" />
+
+        <div class="order-total">
+          <span>Total price:</span>
+          <span id="total-price">$0</span>
+        </div>
+
+        <div id="button-container">
+          <button id="order-button" class="app-button">Complete order</button>
+        </div>
+      </section>
+
+      <section id="message" class="container"></section>
+    </main>
+
+    <!-- Modal overlay -->
+    <div id="pay-modal-container">
+      <div id="pay-modal">
+        <h3 class="pay-header">Enter card details</h3>
+
+        <form id="pay-form">
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Enter your name"
+            required
+          />
+
+          <input
+            type="number"
+            id="card"
+            name="card"
+            placeholder="Enter card number"
+            required
+          />
+
+          <input
+            type="number"
+            id="cvv"
+            name="cvv"
+            placeholder="Enter CVV"
+            required
+          />
+
+          <button id="pay-button" class="app-button" type="submit">Pay</button>
+          <button id="cancel-button" class="app-button" type="button">
+            Cancel
+          </button>
+        </form>
+      </div>
+    </div>
 
     <script type="module" src="index.js"></script>
   </body>
-
 </html>

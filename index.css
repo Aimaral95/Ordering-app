@@ -1,90 +1,91 @@
-html, body {
-    margin: 0;
-    font-family: "Smythe", sans-serif;
+html,
+body {
+  margin: 0;
+  font-family: "Smythe", sans-serif;
+  background: #fff;
 }
 
+/* Header */
 header {
   position: relative;
   background-image: url("./images/restaurant.jpg");
   background-size: cover;
   background-position: center right;
   color: #ffffff;
-  font-weight: 400;
-  padding: 10px 8px 30px 46px;
+  height: 167px;
+  display: flex;
+  align-items: flex-end;
 }
 
 header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0)
-  );
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 }
 
 .hero-text {
-  position: relative; 
+  position: relative;
+  padding: 0 46px 25px;
 }
 
 header h1 {
-  margin-bottom: 2px;
-  font-size: 39px; 
+  margin: 0 0 6px;
+  font-size: 39px;
+  font-weight: 400;
 }
 
 header h2 {
-  margin:0;
+  margin: 0;
   font-size: 22px;
+  font-weight: 400;
 }
 
-.controls-container {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-#menu {
+/* Layout container */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
   padding: 0 46px;
 }
 
+/* Menu */
 .menu-item {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 20px 0;
+  padding: 22px 0;
   border-bottom: 1px solid #dedede;
 }
 
-.menu-item .emoji {
+.emoji {
   font-size: 64px;
   width: 78px;
   text-align: center;
 }
 
-.menu-item .description {
+.description {
   flex: 1;
 }
 
-.menu-item .description h1 {
+.description h1 {
   margin: 0;
   font-size: 28px;
   font-weight: 400;
 }
 
-.menu-item .description p {
+.description p {
   margin: 6px 0 10px;
   font-size: 16px;
   color: #8b8b8b;
 }
 
-.menu-item .description h2 {
+.description h2 {
   margin: 0;
   font-size: 20px;
   font-weight: 400;
 }
 
-.menu-item .add-btn {
+.add-btn {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -96,6 +97,139 @@ header h2 {
   place-items: center;
 }
 
-.menu-item .add-btn:hover {
+.add-btn:hover {
   border-color: #000;
+}
+
+/* Order */
+.hidden {
+  display: none;
+}
+
+.centered-text {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 400;
+  margin: 35px 0 20px;
+}
+
+.order-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.order-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.order-name {
+  font-size: 20px;
+}
+
+.remove-btn {
+  border: none;
+  background: transparent;
+  color: #8b8b8b;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.order-line {
+  border: none;
+  border-top: 2px solid #393333;
+  margin: 10px 0;
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin: 10px 0 20px;
+}
+
+#button-container {
+  margin-bottom: 40px;
+}
+
+/* Buttons */
+.app-button {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 3px;
+  background: #16db99;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.app-button:hover {
+  filter: brightness(0.95);
+}
+
+/* Modal */
+#pay-modal-container {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#pay-modal-container.show {
+  display: flex;
+}
+
+#pay-modal {
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.pay-header {
+  margin: 0 0 15px;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+#pay-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#pay-form input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #dedede;
+  border-radius: 6px;
+}
+
+/* Thank you message */
+#message {
+  margin-top: 15px;
+  margin-bottom: 60px;
+}
+
+.thanks {
+  background: #ecfdf5;
+  color: #065f46;
+  padding: 18px;
+  border-radius: 6px;
+  font-size: 22px;
+  text-align: center;
 }
