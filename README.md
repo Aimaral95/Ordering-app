@@ -1,4 +1,5 @@
 Description
+
   A responsive restaurant ordering web app that allows users to browse a menu, add and remove items from an order, calculate totals in real time, and complete a simulated checkout flow with a confirmation message.
 
 Tech Stack
